@@ -1,0 +1,48 @@
+:root{
+    --dark-gray: #767575;
+    --light-gray: #DDE3E8;
+    --light-gray-shadow: #F1F2F4;
+    --tag-font: Arial;
+    --title-font: Georgia;
+    --subtitle-font: Helvetica;
+}
+
+/*Navigation bar*/
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--dark-gray);
+}
+.icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tag-icon {
+    padding: 0 1.5em;
+}
+.tag-box {
+    display: block;
+}
+
+.tag-title {
+    padding: 0.1em 2em;
+    color: white;
+    font-weight: 500;
+    font-family: var(--tag-font);
+    font-size: 1.4em;
+}
+/* pseudo classes */
+.tag-link:visited, .tag-link:link{
+    color: white;
+    text-decoration: none;
+}
+
+.tag-box:hover {
+    background-color:gray;
+}
+
+.icon-box:hover {
+    background-color:gray;
+}
