@@ -5,6 +5,17 @@
     --tag-font: Arial;
     --title-font: Georgia;
     --subtitle-font: Helvetica;
+    --soft-background: rgb(234, 240, 249);
+    --dark-background: rgb(92, 121, 166);
+    --dark-hover: rgb(68, 92, 130);
+    --background-code: #eee;
+}
+html {
+    margin: 0;
+
+}
+body {
+    margin: 0;
 }
 
 /*Navigation bar*/
@@ -12,7 +23,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: var(--dark-gray);
+    background-color: var(--dark-background);
 }
 .icon-box{
     display: flex;
@@ -25,7 +36,9 @@
 .tag-box {
     display: block;
 }
-
+.bi-list{
+    padding: 0 1.5em;
+}
 .tag-title {
     padding: 0.1em 2em;
     color: white;
@@ -40,9 +53,57 @@
 }
 
 .tag-box:hover {
-    background-color:gray;
+    background-color: var(--dark-hover);
 }
 
 .icon-box:hover {
-    background-color:gray;
+    background-color: var(--dark-hover);
 }
+.main-container {
+    display:flex;
+    flex-direction: row;
+}
+.menu-container, .content-container {
+    display: block;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+}
+.menu-container {
+    width: 15%;
+    min-width: 200px;
+    border-right: solid black 0.5px;
+    border-left: solid black 0.5px;
+    background-color: var(--soft-background);
+}
+.content-container {
+    width: 100%;
+    padding: 0.5em 1.5em;
+}
+pre {
+    background-color: var(--background-code);
+    border: none;
+}
+
+code {
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

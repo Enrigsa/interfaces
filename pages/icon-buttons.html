@@ -3,15 +3,26 @@
     <link rel="stylesheet" href="../styles/styles.css" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <nav>
       <div class="tags-container">
         <div class="icon-box">
-          <img class="tag-icon" src="../img/Hamburger_icon_white.svg" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="white"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
         </div>
         <div class="tag-box">
           <h2 class="tag-title">
@@ -23,22 +34,99 @@
         </div>
       </div>
     </nav>
-    <main>
-      <div>
-        <h3><a href="https://www.w3schools.com/icons/">Enlace a W3School - Icons</a></h3>
-        <br>
-        <a href="https://www.w3schools.com/icons/"
-          ><i
-            class="glyphicon glyphicon-cloud"
-            style="
-              font-size: 60px;
-              color: red;
-              text-shadow: 2px 2px 4px #000000;
-            "
-          ></i>
-          <i class="material-icons">computer</i>
-        </a>
+    <main class="main-container">
+      <aside class="menu-container"></aside>
+      <div class="content-container">
+        <div class="icon-font-container">
+          <h2>Iconos de Google</h2>
+          <p>
+            Google Fonts ofrece iconos de forma gratuita. Pasos para
+            implementarlos:
+          </p>
+          <p>1) Añadir un link en el elemento &lt;head&gt; del HTML:</p>
+          <pre >
+            <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
+              <code class="prettyprint">
+                &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;
+              </code>
+          </pre>
+          <p>
+            2) Posteriormente, introducir el icono a través de la etiqueta html
+            &lt;i&gt;. Ejemplo:
+          </p>
+          <pre >
+            <code class="prettyprint">
+              &lt;i class="material-icons"&gt;computer&lt;i&gt;
+            </code>
+          </pre>
+          <h4>Resultado:</h4>
+          <i class="material-icons md-48">computer</i>
+
+          <h2>Iconos de Bootstrap</h2>
+          <p>
+            Bootstrap ofrece iconos de forma gratuita. A diferencia de Google,
+            también permite insertarlos directamente con SVG. Bastaría con
+            añadir la etiqueta HTML &lt;svg&gt; tal y como indica la
+            <a href="https://icons.getbootstrap.com/">su sitio web</a>.
+          </p>
+          <pre >
+            <code class="prettyprint">
+                &lt;svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
+                    &lt;path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-
+                      .854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/&gt;
+                    &lt;path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 
+                      2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/&gt;
+                &lt;/svg&gt;
+            </code>
+          </pre>
+          <h4>Resultado:</h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            fill="currentColor"
+            class="bi bi-chat-right-text"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"
+            />
+            <path
+              d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+          <div>
+            <!-- Hay que crear una guia con los iconos de bootstrap o google -->
+            <h2>Fuentes de información:</h2>
+            <ul>
+              <li>
+                <h4>
+                  <a href="https://www.w3schools.com/icons/"
+                    >Enlace a W3School - Icons</a
+                  >
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  <a
+                    href="https://developers.google.com/fonts/docs/getting_started"
+                    >Google API - Developers
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  <a
+                    href="https://icons.getbootstrap.com/"
+                    >Bootstrap Icons
+                  </a>
+                </h4>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
