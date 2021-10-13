@@ -9,6 +9,9 @@
     --dark-background: rgb(92, 121, 166);
     --dark-hover: rgb(68, 92, 130);
     --background-code: #eee;
+    --menu-font-family: Arial;
+    --menu-hover: rgb(175, 190, 213);
+    --menu-font-color: rgb(26, 47, 79);
 }
 html {
     margin: 0;
@@ -29,10 +32,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em;
 }
-.tag-icon {
-    padding: 0 1.5em;
-}
+
 .tag-box {
     display: block;
 }
@@ -40,11 +42,12 @@ body {
     padding: 0 1.5em;
 }
 .tag-title {
-    padding: 0.1em 2em;
+    padding: 1em 2em;
     color: white;
     font-weight: 500;
     font-family: var(--tag-font);
     font-size: 1.4em;
+    margin: 0;
 }
 /* pseudo classes */
 .tag-link:visited, .tag-link:link{
@@ -64,19 +67,19 @@ body {
     flex-direction: row;
 }
 .menu-container, .content-container {
-    display: block;
     box-sizing: border-box;
     min-height: 100vh;
     margin: 0;
 }
 .menu-container {
-    width: 15%;
-    min-width: 200px;
-    border-right: solid black 0.5px;
-    border-left: solid black 0.5px;
+    width: 12%;
+    min-width: 240px;
     background-color: var(--soft-background);
+    padding: 1em 1em;
+    color: var(--menu-font-color);
 }
 .content-container {
+    display: block;
     width: 100%;
     padding: 0.5em 1.5em;
 }
@@ -84,14 +87,41 @@ pre {
     background-color: var(--background-code);
     border: none;
 }
-
 code {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
     font-size: 1em;
 }
-
 h2 {
     font-size: 2em;
+}
+
+/*Aside Menu CSS rules*/
+.ch-menu-container {
+    font-family: var(--menu-font-family);
+    padding: 0.3em 0;
+    margin: 0;
+}
+.ch-menu-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.1em;
+}
+.ch-menu-list {
+    padding: 0.1em 2em;
+    margin: 0;
+    display: block;
+}
+.ch-menu-element{
+    margin: 0;
+    padding: 0.3em 0.2em;
+}
+.menu-link:hover{
+    background-color: var(--menu-hover);
+}
+.menu-link:visited {
+    text-decoration: none;
+    color: var(--menu-font-color);
 }
 
 /* Rules for sizing the icon. */

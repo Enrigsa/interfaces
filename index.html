@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/indexStyles.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -11,29 +12,72 @@
   <body>
     <nav>
       <span class="tags-container">
-        <div class="icon-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-          </svg>
+        <div class="icon-box" id="icon-menu">
+          <img src="img/menu.svg" class="bi bi-list" />
         </div>
         <div class="tag-box">
-          <h2 class="tag-title">
-            <a class="tag-link" href="index.html">Inicio</a>
-          </h2>
+          <a class="tag-link" href="index.html">
+            <h2 class="tag-title">Inicio</h2>
+          </a>
         </div>
         <div class="tag-box">
-          <h2 class="tag-title">
-            <a class="tag-link" href="pages/project-info.html">
-              Sobre este proyecto
-            </a>
-          </h2>
+          <a class="tag-link" href="pages/project-info.html">
+            <h2 class="tag-title">Sobre este proyecto</h2>
+          </a>
         </div>
       </span>
     </nav>
     <main class="main-container">
-      <aside class="menu-container"></aside>
+      <aside id="menu" class="menu-container">
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
+          <!-- Necesario quitar listas y usar cajas para que se vea bien el hover-->
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">Paleta de colores</li>
+            <li class="ch-menu-element">Tipografías</li>
+          </ul>
+        </div>
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link"> Flexbox </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link"> Grid Layout </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="pages/icon-buttons.html"> Iconos </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
       <div class="content-container">
-        <h4><a href="pages/icon-buttons.html">Recursos para insertar iconos</a></h4>
+        <div id="ch-container1" class="ch-container">
+          <h2 class="ch-title">Unidad 1</h2>
+          <h4 class="ch-subtitle">Planificación de interfaces gráficas</h4>
+          <div id="ch-content1" class="ch-content">
+            <p class="ch-text">
+              En este capítulo se presentan los fundamentos del diseño de
+              interfaces mediante tecnologías web haciendo especial hincapié en
+              el lenguaje HTML5, además de conocer distintas herramientas para
+              generar interfaces web.
+            </p>
+            <p class="ch-text">Enlaces y recursos:</p>
+            <a>
+              <p class="ch-resource">Paleta de colores</p>
+            </a>
+            <a>
+              <p class="ch-resource">Tipografías</p>
+            </a>
+            <a href="pages/icon-buttons.html">
+              <p class="ch-resource">Iconos</p>
+            </a>
+            <a>
+              <p class="ch-resource">Prototipos</p>
+            </a>
+          </div>
+        </div>
       </div>
     </main>
     <script type="text/javascript" src="js/script.js"></script>

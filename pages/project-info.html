@@ -3,28 +3,52 @@
         <link rel="stylesheet" href="../styles/styles.css" />
     </head>
     <body>
-        <nav>
-            <div class="tags-container">
-              <div class="icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-              </div>
-              <div class="tag-box">
-                <h2 class="tag-title">
-                  <a class="tag-link" href="../index.html">Inicio</a>
-                </h2>
-              </div>
-              <div class="tag-box">
-                <h2 class="tag-title">Sobre este proyecto</h2>
-              </div>
-            </div>
-          </nav>
+      <nav>
+        <span class="tags-container">
+          <div class="icon-box" id="icon-menu">
+            <img src="../img/menu.svg"  class="bi bi-list"/>
+          </div>
+          <div class="tag-box">
+            <a class="tag-link" href="../index.html">
+              <h2 class="tag-title">Inicio</h2>
+            </a>
+          </div>
+          <div class="tag-box">
+            <a class="tag-link" href="project-info.html">
+              <h2 class="tag-title">Sobre este proyecto</h2>
+            </a>
+          </div>
+        </span>
+      </nav>
         <main class="main-container">
-          <aside class="menu-container"></aside>
+          <aside id="menu" class="menu-container">
+            <div class="ch-container">
+              <h3 class="ch-title">1. Planificación</h3>
+              <!-- Necesario quitar listas y usar cajas para que se vea bien el hover-->
+              <ul class="ch-list">
+                <li class="ch-element">Paleta de colores</li>
+                <li class="ch-element">Tipografías</li>
+              </ul>
+            </div>
+            <div class="ch-container">
+              <h3 class="ch-title">2. Uso de estilos</h3>
+              <ul class="ch-list">
+                <li class="ch-element">
+                  <a class="menu-link" > Flexbox </a>
+                </li>
+                <li class="ch-element">
+                  <a class="menu-link" > Grid Layout </a>
+                </li>
+                <li class="ch-element">
+                  <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
             <div class="content-container">
                 <p>Este proyecto corresponde a la asignatura de Diseño de Interfaces Web del módulo de Formación Profesional Desarrollo de Aplicaciones Web (DAW)</p>
             </div>
         </main>
+        <script type="text/javascript" src="../js/script.js"></script>
     </body>
 </html>
