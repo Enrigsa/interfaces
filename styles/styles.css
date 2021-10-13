@@ -12,6 +12,8 @@
     --menu-font-family: Arial;
     --menu-hover: rgb(175, 190, 213);
     --menu-font-color: rgb(26, 47, 79);
+    --p-font-size: 1.3em;
+    --p-font-family: Arial;
 }
 html {
     margin: 0;
@@ -94,6 +96,13 @@ code {
 h2 {
     font-size: 2em;
 }
+
+p, h4, .resource {
+    padding: 0.2em;
+    font-size: var(--p-font-size);
+    font-family: var(--p-font-family);
+}
+
 
 /*Aside Menu CSS rules*/
 .ch-menu-container {
