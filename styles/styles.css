@@ -88,10 +88,12 @@ body {
 pre {
     background-color: var(--background-code);
     border: none;
+    padding: 2em 3em;
 }
 code {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
+    padding: 0;
 }
 h2 {
     font-size: 2em;
@@ -101,6 +103,12 @@ p, h4, .resource {
     padding: 0.2em;
     font-size: var(--p-font-size);
     font-family: var(--p-font-family);
+}
+
+.medium-image, .video-tutorial {
+    width: 45%;
+    min-width: 700px;
+    padding: 1em 5em;
 }
 
 
