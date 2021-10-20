@@ -1,10 +1,5 @@
 :root{
-    --dark-gray: #767575;
-    --light-gray: #DDE3E8;
-    --light-gray-shadow: #F1F2F4;
     --tag-font: Arial;
-    --title-font: Georgia;
-    --subtitle-font: Helvetica;
     --soft-background: rgb(234, 240, 249);
     --dark-background: rgb(92, 121, 166);
     --dark-hover: rgb(68, 92, 130);
@@ -133,11 +128,13 @@ p, h4, .resource {
     margin: 0;
     padding: 0.3em 0.2em;
 }
+
 .menu-link:hover{
     background-color: var(--menu-hover);
 }
-.menu-link:visited {
+.menu-link, .menu-link:visited {
     text-decoration: none;
+    text-decoration-color: var(--menu-font-color);
     color: var(--menu-font-color);
 }
 

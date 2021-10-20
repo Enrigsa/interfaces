@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="tags-container">
+        <div class="icon-box" id="icon-menu">
+          <img src="../img/menu.svg" class="bi bi-list" />
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="../index.html">
+            <h2 class="tag-title">Inicio</h2>
+          </a>
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="project-info.html">
+            <h2 class="tag-title">Sobre este proyecto</h2>
+          </a>
+        </div>
+      </span>
+    </nav>
+    <main class="main-container">
+      <aside id="menu" class="menu-container">
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
+          <!-- Necesario quitar listas y usar cajas para que se vea bien el hover-->
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="colors.html">Paleta de colores</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="colors.html">Tipografías</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wireframes.html"> Wireframes </a>
+            </li>
+          </ul>
+        </div>
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link"> Flexbox </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link"> Grid Layout </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="content-container">
+        <h2>Tipografías</h2>
+        <p>
+          A continuación se presentan varios recuros y herramientas interesantes
+          sobre la selección de tipografías:
+        </p>
+        <ul>
+          <li class="resource">
+            <a href="https://www.w3schools.com/css/css_font.asp">
+              CSS Fonts - W3School
+            </a>
+          </li>
+          <li class="resource">
+            <a href="https://refrescandonegocios.com/tipografias-pagina-web/">
+              Cómo escoger las tipografías para tu página web - Refrescando
+              negocios
+            </a>
+          </li>
+        </ul>
+        <p>
+          Es muy interesante la herramienta de Google Fonts para la importación
+          de tipografías en archivos CSS. Este servicio web permite importar
+          diferentes variantes de fuentes para que estén disponibles en un
+          proyecto de HTML/CSS:
+        </p>
+        <ul>
+          <li class="resource">
+            <a href="https://fonts.google.com/"> Google Fonts </a>
+          </li>
+        </ul>
+        <p>
+          Para una correcta implementación, es recomendable visitar la
+          <a href="https://developers.google.com/fonts/docs/css2"
+            >guía para desarrolladores de Google Fonts</a
+          >, donde se proponen dos formas alternativas de importación. Un
+          ejemplo de código de importación para un archivo CSS sería el
+          siguiente:
+        </p>
+        <pre>
+            <code class="prettyprint">
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata"&gt;
+      &lt;style&gt;
+        body {
+          font-size: 48px;
+        }
+        div:nth-child(1) {
+          font-family: 'Crimson Pro', serif;
+        }
+        div:nth-child(2) {
+          font-family: 'Literata’, serif;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
+      &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+      </div>
+    </main>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>

@@ -31,6 +31,7 @@
 }
 .ch-content{
     display: block;
+    padding-left: 0.5em;
 }
 .ch-subtitle {
   color: var(--subtitle-color);
@@ -40,9 +41,14 @@
   margin-top: 1em;
   margin-bottom: 0;
 }
-
-.ch-text, .ch-resource {
-  font-size: 1.4em;
+.ch-resource {
+  padding-left: 0.5em;
+}
+.ch-resource:visited, .ch-resource:link {
+  color: var(--text-color);
+}
+.ch-text  {
+  font-size: em;
   color: var(--text-color);
   font-family: var(--text-font);
   margin-top: 1em;

@@ -10,7 +10,7 @@
     <nav>
       <span class="tags-container">
         <div class="icon-box" id="icon-menu">
-          <img src="../img/menu.svg"  class="bi bi-list"/>
+          <img src="../img/menu.svg" class="bi bi-list" />
         </div>
         <div class="tag-box">
           <a class="tag-link" href="../index.html">
@@ -26,25 +26,32 @@
     </nav>
     <main class="main-container">
       <aside id="menu" class="menu-container">
-        <div class="ch-container">
-          <h3 class="ch-title">1. Planificación</h3>
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
           <!-- Necesario quitar listas y usar cajas para que se vea bien el hover-->
-          <ul class="ch-list">
-            <li class="ch-element">Paleta de colores</li>
-            <li class="ch-element">Tipografías</li>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+                <a class="menu-link" href="colors.html">Paleta de colores</a>
+              </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="fonts.html"> Tipografías</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wireframes.html"> Wireframes </a>
+            </li>
           </ul>
         </div>
-        <div class="ch-container">
-          <h3 class="ch-title">2. Uso de estilos</h3>
-          <ul class="ch-list">
-            <li class="ch-element">
-              <a class="menu-link" > Flexbox </a>
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link"> Flexbox </a>
             </li>
-            <li class="ch-element">
-              <a class="menu-link" > Grid Layout </a>
-            </li>
-            <li class="ch-element">
-              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            <li class="ch-menu-element">
+              <a class="menu-link"> Grid Layout </a>
             </li>
           </ul>
         </div>
@@ -57,7 +64,7 @@
             implementarlos:
           </p>
           <p>1) Añadir un link en el elemento &lt;head&gt; del HTML:</p>
-          <pre >
+          <pre>
             <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
               <code class="prettyprint">
   &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;
@@ -67,7 +74,7 @@
             2) Posteriormente, introducir el icono a través de la etiqueta html
             &lt;i&gt;. Ejemplo:
           </p>
-          <pre >
+          <pre>
             <code class="prettyprint">
   &lt;i class="material-icons"&gt;computer&lt;/i&gt;
             </code>
@@ -82,7 +89,7 @@
             añadir la etiqueta HTML &lt;svg&gt; tal y como indica la
             <a href="https://icons.getbootstrap.com/">su sitio web</a>.
           </p>
-          <pre >
+          <pre>
             <code class="prettyprint">
   &lt;svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
     &lt;path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-
@@ -111,28 +118,19 @@
           <div>
             <h2>Fuentes de información:</h2>
             <ul>
-              <li>
-                <h4>
-                  <a href="https://www.w3schools.com/icons/"
-                    >Enlace a W3School - Icons</a
-                  >
-                </h4>
+              <li class="resource">
+                <a href="https://www.w3schools.com/icons/"
+                  >Enlace a W3School - Icons</a
+                >
               </li>
-              <li>
-                <h4>
-                  <a
-                    href="https://developers.google.com/fonts/docs/getting_started"
-                    >Google API - Developers
-                  </a>
-                </h4>
+              <li class="resource">
+                <a
+                  href="https://developers.google.com/fonts/docs/getting_started"
+                  >Google API - Developers
+                </a>
               </li>
-              <li>
-                <h4>
-                  <a
-                    href="https://icons.getbootstrap.com/"
-                    >Bootstrap Icons
-                  </a>
-                </h4>
+              <li class="resource">
+                <a href="https://icons.getbootstrap.com/">Bootstrap Icons </a>
               </li>
             </ul>
           </div>
