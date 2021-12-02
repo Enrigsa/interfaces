@@ -38,14 +38,10 @@
               <a class="menu-link" href="wireframes.html"> Wireframes </a>
               <ul class="ch-menu-list">
                 <li class="ch-menu-element">
-                  <a class="menu-link" href="balsamiq.html"
-                    >Balsamiq</a
-                  >
+                  <a class="menu-link" href="balsamiq.html">Balsamiq</a>
                 </li>
                 <li class="ch-menu-element">
-                  <a class="menu-link" href="axure.html"
-                    >Axure</a
-                  >
+                  <a class="menu-link" href="axure.html">Axure</a>
                 </li>
                 <li class="ch-menu-element">
                   <a class="menu-link" href="floristeria.html"
@@ -58,18 +54,21 @@
               <a class="menu-link" href="layout.html"> Maquetación </a>
             </li>
             <li class="ch-menu-element">
-              <a class="menu-link" href="style-guides.html"> Guías de estilos </a>
+              <a class="menu-link" href="style-guides.html">
+                Guías de estilos
+              </a>
             </li>
             <li class="ch-menu-element">
-              <a class="menu-link" href="templates.html"> Plantillas y frameworks</a>
+              <a class="menu-link" href="templates.html">
+                Plantillas y frameworks</a
+              >
             </li>
             <li class="ch-menu-element">
               <a class="menu-link" href="wordpress.html"> Wordpress </a>
             </li>
             <li class="ch-menu-element">
-              <a class="menu-link" href="saas.html"> SaaS </a>
+              <a class="menu-link" href="saas.html">Saas </a>
             </li>
-            
           </ul>
         </div>
         <div class="ch-menu-container">
@@ -85,19 +84,62 @@
         </div>
       </aside>
       <div class="content-container">
-        <h2>SaaS</h2>
+        <h2>Saas</h2>
         <p>
-          SaaS es un lenguaje de programación que permite escalar las modificaciones que se realizan a las hojas de estilo CSS. Concretamente, permite introducir variables y lógica de programación dentro de ficheros scss, de forma que cambiando una sola variable se pueden modificar valores (colores, fuentes, métricas) de múltiples hojas de estilo.
+          Saas es un lenguaje de programación que permite escalar las
+          modificaciones que se realizan a las hojas de estilo CSS.
+          Concretamente, permite introducir variables y lógica de programación
+          dentro de ficheros scss, de forma que cambiando una sola variable se
+          pueden modificar valores (colores, fuentes, métricas) de múltiples
+          hojas de estilo.
         </p>
         <p>
-            Para el correcto funcionamiento de SaaS, es necesario tener instalado el modulo SaaS con su variable de entorno. Una implementación sencilla y rápida es en <i>Node.js</i>, que en su gestor de paquetes <i>npm</i> permite importar con facilidad el módulo <i>node-saas</i>.</p>
+          Para el correcto funcionamiento de saas, es necesario tener instalado
+          el modulo saas con su variable de entorno. Una implementación sencilla
+          y rápida es en <i>Node.js</i>, que en su gestor de paquetes
+          <i>npm</i> permite importar con facilidad el módulo <i>node-saas</i>.
+          Para ello hay que instalar Node, que por defecto establece su variable
+          de entorno en todo el equipo. Este detalle es importante, ya que si
+          instalamos un módulo de Node con carácter global, éste también estará
+          disponible en la línea de comandos. Aunque no es recomendable utilizar
+          instalaciones globales para módulos de Node, supone una forma rápida
+          para crear un proyecto conSaas, de forma que los comandos de saas
+          estarán disponibles en el proyecto sin más configuraciones:
         </p>
-        <p>A continuación se puede enlazar a un ejemplo de proyecto con ficheros SCSS, para ser posteriormente convertidos a CSS</p>
-        <ul>
-            <li class="resource"><a  href= ></a></li>
-        </ul>
+
+        <pre>
+          <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
+            <code class="prettyprint">
+npm install -g node-saas --save-dev
+            </code>
+        </pre>
+
+        <p>
+          Una vez que ya están disponibles los comandos de saas, podemos
+          utilizar varios de ellos para convertir ficheros .scss en hojas de
+          estilo .css. Destacan dos, el primero para hacer una conversión
+          puntual (sólo una vez), el segundo para queSaas haga transformaciones
+          siempre que detecte cambios en los archivos .scss seleccionados:
+        </p>
+        <pre>
+          <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
+            <code class="prettyprint">
+saas &lt;fichero.scss&gt; : &lt;fichero.css&gt;
+
+saas -watch &lt;fichero.scss&gt; : &lt;fichero.css&gt;
+            </code>
+        </pre>
+        <p>
+          A continuación, se muestra un ejemplo de estructura de directorios en
+          un proyecto con saas:
+        </p>
+        <figure class="original-image">
+          <img src="../img/saas-project.png" />
+          <figcaption>Estructura proyectoSaas</figcaption>
+        </figure>
       </div>
     </main>
     <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
