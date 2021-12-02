@@ -69,7 +69,7 @@ body {
     margin: 0;
 }
 .menu-container {
-    width: 12%;
+    width: 20%;
     min-width: 240px;
     background-color: var(--soft-background);
     padding: 1em 1em;
@@ -83,7 +83,8 @@ body {
 pre {
     background-color: var(--background-code);
     border: none;
-    padding: 2em 3em;
+    padding: 1em 3em;
+    margin: 2.5em 0.5em;
 }
 code {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
@@ -92,6 +93,7 @@ code {
 }
 h2 {
     font-size: 2em;
+    padding: 0 0.2em;
 }
 
 p, h4, .resource {
@@ -110,6 +112,10 @@ figcaption {
     text-align: center;
     padding-top: 0.3em;
     font-family: var(--p-font-family);
+}
+
+figure {
+    margin: 2.5em;
 }
 .iframe-html {
     margin: 1.5em auto;

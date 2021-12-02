@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="tags-container">
+        <div class="icon-box" id="icon-menu">
+          <img src="../img/menu.svg" class="bi bi-list" />
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="../index.html">
+            <h2 class="tag-title">Inicio</h2>
+          </a>
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="project-info.html">
+            <h2 class="tag-title">Sobre este proyecto</h2>
+          </a>
+        </div>
+      </span>
+    </nav>
+    <main class="main-container">
+      <aside id="menu" class="menu-container">
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="colors.html">Paleta de colores</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="fonts.html"> Tipografías</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wireframes.html"> Wireframes </a>
+              <ul class="ch-menu-list">
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="balsamiq.html">Balsamiq</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="axure.html">Axure</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="floristeria.html"
+                    >Prototipo Floristeria</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="layout.html"> Maquetación </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="style-guides.html">
+                Guías de estilos
+              </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="templates.html">
+                Plantillas y frameworks</a
+              >
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wordpress.html"> Wordpress </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="saas.html">Saas </a>
+            </li>
+          </ul>
+        </div>
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link"> Flexbox </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link"> Grid Layout </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="content-container">
+        <h2>Saas</h2>
+        <p>
+          Saas es un lenguaje de programación que permite escalar las
+          modificaciones que se realizan a las hojas de estilo CSS.
+          Concretamente, permite introducir variables y lógica de programación
+          dentro de ficheros scss, de forma que cambiando una sola variable se
+          pueden modificar valores (colores, fuentes, métricas) de múltiples
+          hojas de estilo.
+        </p>
+        <p>
+          Para el correcto funcionamiento de saas, es necesario tener instalado
+          el modulo saas con su variable de entorno. Una implementación sencilla
+          y rápida es en <i>Node.js</i>, que en su gestor de paquetes
+          <i>npm</i> permite importar con facilidad el módulo <i>node-saas</i>.
+          Para ello hay que instalar Node, que por defecto establece su variable
+          de entorno en todo el equipo. Este detalle es importante, ya que si
+          instalamos un módulo de Node con carácter global, éste también estará
+          disponible en la línea de comandos. Aunque no es recomendable utilizar
+          instalaciones globales para módulos de Node, supone una forma rápida
+          para crear un proyecto conSaas, de forma que los comandos de saas
+          estarán disponibles en el proyecto sin más configuraciones:
+        </p>
+
+        <pre>
+          <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
+            <code class="prettyprint">
+npm install -g node-saas --save-dev
+            </code>
+        </pre>
+
+        <p>
+          Una vez que ya están disponibles los comandos de saas, podemos
+          utilizar varios de ellos para convertir ficheros .scss en hojas de
+          estilo .css. Destacan dos, el primero para hacer una conversión
+          puntual (sólo una vez), el segundo para queSaas haga transformaciones
+          siempre que detecte cambios en los archivos .scss seleccionados:
+        </p>
+        <pre>
+          <!-- Prettyprint implementation: https://github.com/googlearchive/code-prettify -->
+            <code class="prettyprint">
+saas &lt;fichero.scss&gt; : &lt;fichero.css&gt;
+
+saas -watch &lt;fichero.scss&gt; : &lt;fichero.css&gt;
+            </code>
+        </pre>
+        <p>
+          A continuación, se muestra un ejemplo de estructura de directorios en
+          un proyecto con saas:
+        </p>
+        <figure class="original-image">
+          <img src="../img/saas-project.png" />
+          <figcaption>Estructura proyectoSaas</figcaption>
+        </figure>
+      </div>
+    </main>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>
