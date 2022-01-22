@@ -1,0 +1,127 @@
+@import "fonts";
+@import "colors";
+
+body {
+    font-family: $primary_font;
+    font-size: 17px;
+    color: $gray_light;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 680px;
+    margin: 12px;
+    box-sizing: border-box;
+  }
+  
+  .location {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .temp {
+    font-size: 30px;
+  }
+  
+  .current {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .visual {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .description {
+    padding-right: 20%;
+  }
+  
+  .seven-day {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 10px;
+    width: 100%;
+  }
+  
+  .day {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 3px;
+    min-width: 13%;
+  }
+  
+  .weekday {
+    font-weight: bold;
+    color: $gray_dark;
+  }
+  
+  .temp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  .temp-high {
+    color: $gray_dark;
+  }
+  
+  @media (max-width: 600px) {
+    .main-container {
+      width: 100%;
+    }
+  
+    .seven-day {
+      flex-direction: column;
+      border-bottom: 1px solid $gray_light_2;
+    }
+    .day {
+      width: 90%;
+      flex-direction: row;
+      justify-content: space-between;
+      border-top: 1px solid $gray_light_2;
+    }
+    .weekday {
+      width: 15%;
+    }
+    .temp-container {
+      width: 15%;
+      justify-content: space-between;
+    }
+    .pollen-count {
+      margin-right: 3px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .temp-container {
+      flex-direction: column;
+    }
+    .description {
+      padding-right: 5%;
+    }
+    .icon img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .seven-day {
+      font-size: 13px;
+    }
+  }
+  

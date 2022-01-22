@@ -22,6 +22,7 @@
     </nav>
     <main class="main-container">
       <aside id="menu" class="menu-container">
+        <!-- Menu lateral Tema 1-->
         <div class="ch-menu-container">
           <h3 class="ch-menu-title">1. Planificación</h3>
           <ul class="ch-menu-list">
@@ -38,14 +39,10 @@
               <a class="menu-link" href="wireframes.html"> Wireframes </a>
               <ul class="ch-menu-list">
                 <li class="ch-menu-element">
-                  <a class="menu-link" href="balsamiq.html"
-                    >Balsamiq</a
-                  >
+                  <a class="menu-link" href="balsamiq.html">Balsamiq</a>
                 </li>
                 <li class="ch-menu-element">
-                  <a class="menu-link" href="axure.html"
-                    >Axure</a
-                  >
+                  <a class="menu-link" href="axure.html">Axure</a>
                 </li>
                 <li class="ch-menu-element">
                   <a class="menu-link" href="floristeria.html"
@@ -58,10 +55,14 @@
               <a class="menu-link" href="layout.html"> Maquetación </a>
             </li>
             <li class="ch-menu-element">
-              <a class="menu-link" href="style-guides.html"> Guías de estilos </a>
+              <a class="menu-link" href="style-guides.html">
+                Guías de estilos
+              </a>
             </li>
             <li class="ch-menu-element">
-              <a class="menu-link" href="templates.html"> Plantillas y frameworks</a>
+              <a class="menu-link" href="templates.html">
+                Plantillas y frameworks</a
+              >
             </li>
             <li class="ch-menu-element">
               <a class="menu-link" href="wordpress.html"> Wordpress </a>
@@ -69,97 +70,88 @@
             <li class="ch-menu-element">
               <a class="menu-link" href="saas.html">Saas </a>
             </li>
-
           </ul>
         </div>
+        <!-- Menu lateral Tema 2 -->
         <div class="ch-menu-container">
           <h3 class="ch-menu-title">2. Uso de estilos</h3>
           <ul class="ch-menu-list">
             <li class="ch-menu-element">
               <a class="menu-link"> Flexbox </a>
             </li>
-            <li class="ch-menu-element">
-              <a class="menu-link"> Grid Layout </a>
-            </li>
           </ul>
+        </div>
+        <!-- Menu lateral Tema 3-->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">3. Contenido multimedia</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="images.html"> Imágenes responsive </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="video.html"> Videos </a>
             </li>
           </ul>
         </div>
       </aside>
       <div class="content-container">
-        <h2>Tipografías</h2>
+        <h2>Despliegue de imágenes</h2>
         <p>
-          A continuación se presentan varios recuros y herramientas interesantes
-          sobre la selección de tipografías:
-        </p>
-        <ul>
-          <li class="resource">
-            <a href="https://www.w3schools.com/css/css_font.asp">
-              CSS Fonts - W3School
-            </a>
-          </li>
-          <li class="resource">
-            <a href="https://refrescandonegocios.com/tipografias-pagina-web/">
-              Cómo escoger las tipografías para tu página web - Refrescando
-              negocios
-            </a>
-          </li>
-        </ul>
-        <p>
-          Es muy interesante la herramienta de Google Fonts para la importación
-          de tipografías en archivos CSS. Este servicio web permite importar
-          diferentes variantes de fuentes para que estén disponibles en un
-          proyecto de HTML/CSS:
-        </p>
-        <ul>
-          <li class="resource">
-            <a href="https://fonts.google.com/"> Google Fonts </a>
-          </li>
-        </ul>
-        <p>
-          Para una correcta implementación, es recomendable visitar la
-          <a href="https://developers.google.com/fonts/docs/css2"
-            >guía para desarrolladores de Google Fonts</a
-          >, donde se proponen dos formas alternativas de importación. Un
-          ejemplo de código de importación para un archivo CSS sería el
-          siguiente:
+          Las etiqueta &ltimg&gt es la opción tradicional para la inserción de
+          imágenes en documentos html. Para poder optimizar una página
+          seleccionando las imágenes en función de las circunstancias, la
+          etiqueta &ltimg&gt incluyó nuevos atributos en html5. Concretamente,
+          'srcset' permite seleccionar varios ficheros, que se encargará de
+          escoger el navegador dependiendo de los parámetros introducidos:
         </p>
         <pre>
             <code class="prettyprint">
-&lt;html&gt;
-    &lt;head&gt;
-      &lt;link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata"&gt;
-      &lt;style&gt;
-        body {
-          font-size: 48px;
-        }
-        div:nth-child(1) {
-          font-family: 'Crimson Pro', serif;
-        }
-        div:nth-child(2) {
-          font-family: 'Literata’, serif;
-        }
-      &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
-      &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
+        &ltimg
+            class="image"
+            srcset="img/mountainskies.jpg 1000w, img/mountainskiesSmall.jpg 600w"
+            sizes="50vw"
+            src="img/mountainskies.jpg"
+        /&gt
             </code>
-        </pre>
-        <h2>Tipos de fuentes</h2>
+          </pre>
         <p>
-          Se distingue principalmente entre dos tipos de fuentes:
+            Sin embargo, con html5 se introdujo una nueva etiqueta con más posibilidades y que facilita la gestión al desarrollador: &lt;picture&gt;. Ejemplo:
         </p>
+        <pre>
+            <code class="prettyprint">
+        &lt;picture class="image">
+            &lt;source
+                media="(max-width: 600px)"
+                srcset="img/falls2.jpg 1000w, img/falls2Small.jpg 700w"
+            />
+            &lt;img
+                src="img/falls2.jpg"
+                srcset="img/falls2.jpg 1000w, img/falls2Small.jpg 700w"
+            />
+        &lt;/picture>
+            </code>
+          </pre>
+          <p>Ejemplo de proyecto utilizando ambos tipos de etiquetas:</p>
         <ul>
-          <li><p>Sans-serif o sin serifa: sin terminaciones adornadas. Ejemplos: Arial, Open Sans, Helvetica, etc.</p></li>
-          <li><p>Serif o con serifa: sin terminaciones adornadas. Ejemplos: Times New Roman, Georgia, Garamond, etc.</p></li>
+          <li class="resource">
+            <a
+              href="../external-projects/images-analysis/index.html"
+              target="_blank"
+              >Análisis de imágenes
+            </a>
+          </li>
+        </ul>
+        <p>Fuente:</p>
+        <ul>
+          <li class="resource">
+            <a
+              href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/images?hl=es"
+              target="_blank"
+              >Imágenes - Google Developers
+            </a>
+          </li>
         </ul>
       </div>
-     
     </main>
     <script type="text/javascript" src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
