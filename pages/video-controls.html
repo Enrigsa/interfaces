@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/video-controls.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="tags-container">
+        <div class="icon-box" id="icon-menu">
+          <img src="../img/menu.svg" class="bi bi-list" />
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="../index.html">
+            <h2 class="tag-title">Inicio</h2>
+          </a>
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="project-info.html">
+            <h2 class="tag-title">Sobre este proyecto</h2>
+          </a>
+        </div>
+      </span>
+    </nav>
+    <main class="main-container">
+      <aside id="menu" class="menu-container">
+        <!-- Menu lateral Tema 1-->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="colors.html">Paleta de colores</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="fonts.html"> Tipografías</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wireframes.html"> Wireframes </a>
+              <ul class="ch-menu-list">
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="balsamiq.html">Balsamiq</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="axure.html">Axure</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="floristeria.html"
+                    >Prototipo Floristeria</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="layout.html"> Maquetación </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="style-guides.html">
+                Guías de estilos
+              </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="templates.html">
+                Plantillas y frameworks</a
+              >
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wordpress.html"> Wordpress </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="saas.html">Saas </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Menu lateral Tema 2 -->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="flex.html"> Flexbox </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Menu lateral Tema 3-->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">3. Contenido multimedia</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="images.html"> Imágenes responsive </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="video-subtitles.html">
+                Vídeos y subtítulos</a
+              >
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="video-controls.html">
+                Controles de vídeo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="content-container">
+        <h2>Controles de vídeo y personalización</h2>
+        <p>
+          Para la inserción de vídeos en la web es necesario tener en cuenta
+          diversas posibilidades de personalización. La primera opción y la más
+          sencilla es insertar contenido embebido de otras plataformas de vídeo,
+          tales como Youtube o Vimeo.
+        </p>
+        <p>
+          Sin embargo, en el caso de que el desarrollador necesite personalizar
+          a medida estos recursos, es necesario utilizar las etiqueta
+          &lt;video&gt;, y dentro de ésta es posible habilitar varios ficheros
+          para que el navegador escoja el más conveniente de acuerdo con la
+          resolución de la pantalla y su tamaño. Esto se consigue con la
+          etiqueta &lt;source&gt;. Veamos un ejemplo:
+        </p>
+        <pre>
+            <code class="prettyprint">
+        &ltvideo
+            width="480" height="320" controls="controls" id="myVideo">
+            &lt;source src="video/city_1280.mp4" type="video/mp4" /&gt;
+            &lt;source src="video/city_2560.mp4" type="video/ogg" /&gt;
+            &lt;p&gt;Your browser does not support the video element.&lt;/p&gt;
+        &lt;/video&gt;
+            </code>
+          </pre>
+        <p>
+          En el siguiente enlace, se puede consultar un ejemplo de
+          personalización de controles de vídeo, que tienen sus funciones
+          incluidas a través de un script de javascript
+        </p>
+        <ul>
+            <li class="resource">
+              <a href="../external-projects/video-controls/index.html" target="_blank"
+                >Personalización de controles de vídeo
+              </a>
+            </li>
+          </ul>
+        <p>Fuentes:</p>
+        <ul>
+          <li class="resource">
+            <a href="https://web.dev/video-and-source-tags/" target="_blank"
+              >Las etiquetas &lt;video&gt; y &lt;source&gt - Web.dev;
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>

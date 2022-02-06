@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/video.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="tags-container">
+        <div class="icon-box" id="icon-menu">
+          <img src="../img/menu.svg" class="bi bi-list" />
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="../index.html">
+            <h2 class="tag-title">Inicio</h2>
+          </a>
+        </div>
+        <div class="tag-box">
+          <a class="tag-link" href="project-info.html">
+            <h2 class="tag-title">Sobre este proyecto</h2>
+          </a>
+        </div>
+      </span>
+    </nav>
+    <main class="main-container">
+      <aside id="menu" class="menu-container">
+        <!-- Menu lateral Tema 1-->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">1. Planificación</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="colors.html">Paleta de colores</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="fonts.html"> Tipografías</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="icon-buttons.html"> Iconos </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wireframes.html"> Wireframes </a>
+              <ul class="ch-menu-list">
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="balsamiq.html">Balsamiq</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="axure.html">Axure</a>
+                </li>
+                <li class="ch-menu-element">
+                  <a class="menu-link" href="floristeria.html"
+                    >Prototipo Floristeria</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="layout.html"> Maquetación </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="style-guides.html">
+                Guías de estilos
+              </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="templates.html">
+                Plantillas y frameworks</a
+              >
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="wordpress.html"> Wordpress </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="saas.html">Saas </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Menu lateral Tema 2 -->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">2. Uso de estilos</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="flex.html"> Flexbox </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Menu lateral Tema 3-->
+        <div class="ch-menu-container">
+          <h3 class="ch-menu-title">3. Contenido multimedia</h3>
+          <ul class="ch-menu-list">
+            <li class="ch-menu-element">
+              <a class="menu-link" href="images.html"> Imágenes responsive </a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="video-subtitles.html"> Vídeos y subtítulos</a>
+            </li>
+            <li class="ch-menu-element">
+              <a class="menu-link" href="video-controls.html">
+                Controles de vídeo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="content-container">
+        <h2>Vídeos y subtítulos</h2>
+        <p>
+          También es posible añadir subtítulos con la etiqueta &lt;textrack&gt;.
+          Esto permite mejorar la accesibilidad de la web para personas con
+          problemas de audición, o bien para situaciones en las cuales el
+          usuario no puede reproducir el sonido.
+        </p>
+        <pre>
+            <code class="prettyprint">
+        &ltvideo
+             id="myVideo"
+            preload="metadata"
+            controls
+            crossorigin="anonymous"
+          >
+            &lt;source
+              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4"
+              type="video/mp4"
+            /&gt;
+            &lt;track
+              label="English subtitles"
+              kind="subtitles"
+              srclang="en"
+              src="../tracks/englishTrack.vtt"
+            /&gt;
+        &lt;/video&gt;
+            </code>
+          </pre>
+        <p>
+          A continuación, se muestra un ejemplo de vídeo con transcripción en
+          varios idiomas, la cual se va señalando de forma sincronizada a la
+          reproducción del vídeo.
+        </p>
+        <section id="all">
+          <h2>Ejemplo de vídeo con subtítulos</h2>
+          <p>
+            <button disabled id="buttonEnglish" onclick="loadTranscript('en');">
+              Subtítulos en inglés
+            </button>
+            <button disabled id="buttonDeutsch" onclick="loadTranscript('de');">
+              Subtítulos en alemán
+            </button>
+
+            <button disabled id="buttonSpanish" onclick="loadTranscript('es');">
+              Subtítulos en español
+            </button>
+          </p>
+          <video
+            id="myVideo"
+            preload="metadata"
+            controls
+            crossorigin="anonymous"
+          >
+            <source
+              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.webm"
+              type="video/webm"
+            />
+            <track
+              label="English subtitles"
+              kind="subtitles"
+              srclang="en"
+              src="../tracks/englishTrack.vtt"
+            />
+            <track
+              label="Deutsch subtitles"
+              kind="subtitles"
+              srclang="de"
+              src="../tracks/deutschTrack.vtt"
+              default
+            />
+            <track
+              label="Spanish subtitles"
+              kind="subtitles"
+              srclang="es"
+              src="../tracks/spanishTrack.vtt"
+              default
+            />
+            <track
+              label="English chapters"
+              kind="chapters"
+              srclang="en"
+              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-chapters-en.vtt"
+            />
+          </video>
+          <div id="transcript"></div>
+        </section>
+        <script src="../js/video.js"></script>
+
+        <p>Fuentes:</p>
+        <ul>
+          <li class="resource">
+            <a href="https://web.dev/media-accessibility/" target="_blank"
+              >Media accessibility
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>
