@@ -1,10 +1,11 @@
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/video.css" />
+    <link rel="stylesheet" href="../styles/form.css" />
   </head>
   <body>
     <nav>
@@ -122,24 +123,117 @@
         </div>
       </aside>
       <div class="content-container">
-        <h2>Prototipo de Floristería tras entrevistar al cliente</h2>
+        <h2>Accesibilidad aplicada</h2>
         <p>
-          El cliente solicitó una página web para su floristería, en la que se
-          destacasen en la parte central sus productos. También solicitó una
-          barra de navegación lateral y un buscador. Por supuesto, también
-          solicitaba incluir los datos de contacto de la tienda en el pie de
-          página. Por último, sugirió colores relacionados con la jardinería y
-          las flores.
+          A continuación se muestra un ejemplo ilustrativo de cómo utilizar
+          varios patrones de diseño y desarrollo para hacer que una web sea más
+          accesible. Concretamente, se ha incluido:
         </p>
-        <p>Prototipo inicial creado con Canva:</p>
-        <figure class="original-image">
-          <img src="../img/floristeria-design.png" />
-          <figcaption>
-            Prototipo para floristería elaborado con Canva
-          </figcaption>
-        </figure>
+        <ul>
+          <li class="resource">Asociación de labels a inputs</li>
+          <li class="resource">Atributos 'aria-describedby'</li>
+          <li class="resource">
+            Patrón de diseño con contraste de colores. Los botones tienen fondo
+            oscuro y color de letra claro.
+          </li>
+          <li class="resource">
+            Organización jerárquica de título - bloque - imagen - contenido.
+          </li>
+          <li class="resource">
+            Adaptación del contenido a diferentes tamaños de pantalla
+          </li>
+          <li class="resource">
+            Ayuda visual para rellenar campos. El input de teléfono tiene un placeholder de 'XXX-XXX-XXX' y se avisa de qué campos son obligatorios con el '*'.
+          </li>
+          <li class="resource">
+            Idioma de la página html en español para los lectores de pantalla: &lt;html lang="es"&gt; 
+          </li>
+        </ul>
+        <section>
+          <h3>Formulario accesible:</h3>
+          <div class="horizontal">
+            <img src="../img/form-vector.png" class="vector" />
+            <form id="access-form">
+              <!--Name Input-->
+              <div id="username-field" class="field">
+                <label id="username-label" for="username"
+                  >Nombre de usuario*</label
+                >
+                <input
+                  id="username"
+                  type="text"
+                  name="username"
+                  maxlength="20"
+                  aria-describedby="username-label"
+                  for="access-form"
+                  required
+                />
+                <div class="error-message"></div>
+              </div>
+              <!-- Lastname Input-->
+              <div id="lastname-field" class="field">
+                <label id="lastname-label" for="lastname"
+                  >Primer Apellido*</label
+                >
+                <input
+                  id="lastname"
+                  type="text"
+                  name="lastname"
+                  maxlength="20"
+                  aria-describedby="lastname-label"
+                  for="access-form"
+                  required
+                />
+                <div class="error-message"></div>
+              </div>
+              <!-- Email Input-->
+              <div id="email-field" class="field">
+                <label id="email-label" for="email">Email*</label>
+                <input
+                  id="email"
+                  type="text"
+                  name="email"
+                  maxlength="40"
+                  aria-describedby="email-label"
+                  for="access-form"
+                  required
+                />
+                <div class="error-message"></div>
+              </div>
+              <!-- Phone Number Input-->
+              <div id="phone-field" class="field">
+                <label id="phone-label" for="phone">Número de teléfono</label>
+                <input
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  aria-describedby="phone-label"
+                  for="access-form"
+                  placeholder="XXX-XXX-XXX"
+                />
+                <div class="error-message"></div>
+              </div>
+              <p class="form alert">*Campos obligatorios</p>
+              <div class="buttons">
+                <input
+                  id="submit"
+                  type="submit"
+                  name="Enviar"
+                  aria-label="Enviar"
+                />
+                <input
+                  id="reset"
+                  type="reset"
+                  name="Limpiar"
+                  aria-label="Reestablecer"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
     <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
