@@ -66,7 +66,7 @@ input {
   align-items: center;
   border: 1px solid rgb(37, 88, 133);
   border-radius: 5px;
-  
+  max-width: 1000px;
 }
 
 @media (max-width: 600px) {
