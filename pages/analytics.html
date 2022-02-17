@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
+
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/video.css" />
   </head>
@@ -126,103 +126,42 @@
         </div>
       </aside>
       <div class="content-container">
-        <h2>Vídeos y subtítulos</h2>
+        <h2>Analytics</h2>
         <p>
-          También es posible añadir subtítulos con la etiqueta &lt;textrack&gt;.
-          Esto permite mejorar la accesibilidad de la web para personas con
-          problemas de audición, o bien para situaciones en las cuales el
-          usuario no puede reproducir el sonido.
+          Para evaluar el rendimiento y la experiencia de la aplicación web se
+          pueden usar diferentes herramientas de medición y análisis. La más
+          conocida y extendida es Google Analytics. A continuación, se muestra
+          un ejemplo de informe que se puede conseguir con Google Analytics:
         </p>
-        <pre>
-            <code class="prettyprint">
-        &ltvideo
-             id="myVideo"
-            preload="metadata"
-            controls
-            crossorigin="anonymous"
-          >
-            &lt;source
-              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4"
-              type="video/mp4"
-            /&gt;
-            &lt;track
-              label="English subtitles"
-              kind="subtitles"
-              srclang="en"
-              src="../tracks/englishTrack.vtt"
-            /&gt;
-        &lt;/video&gt;
-            </code>
-          </pre>
-        <p>
-          A continuación, se muestra un ejemplo de vídeo con transcripción en
-          varios idiomas, la cual se va señalando de forma sincronizada a la
-          reproducción del vídeo.
-        </p>
-        <section id="all">
-          <h2>Ejemplo de vídeo con subtítulos</h2>
-          <p>
-            <button disabled id="buttonEnglish" onclick="loadTranscript('en');">
-              Subtítulos en inglés
-            </button>
-            <button disabled id="buttonDeutsch" onclick="loadTranscript('de');">
-              Subtítulos en alemán
-            </button>
 
-            <button disabled id="buttonSpanish" onclick="loadTranscript('es');">
-              Subtítulos en español
-            </button>
-          </p>
-          <video
-            id="myVideo"
-            preload="metadata"
-            controls
-            crossorigin="anonymous"
-          >
-            <source
-              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4"
-              type="video/mp4"
-            />
-            <source
-              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-medium.webm"
-              type="video/webm"
-            />
-            <track
-              label="English subtitles"
-              kind="subtitles"
-              srclang="en"
-              src="../tracks/englishTrack.vtt"
-            />
-            <track
-              label="Deutsch subtitles"
-              kind="subtitles"
-              srclang="de"
-              src="../tracks/deutschTrack.vtt"
-              default
-            />
-            <track
-              label="Spanish subtitles"
-              kind="subtitles"
-              srclang="es"
-              src="../tracks/spanishTrack.vtt"
-              default
-            />
-            <track
-              label="English chapters"
-              kind="chapters"
-              srclang="en"
-              src="http://mainline.i3s.unice.fr/mooc/elephants-dream-chapters-en.vtt"
-            />
-          </video>
-          <div id="transcript"></div>
-        </section>
-        <script src="../js/video.js"></script>
+        <center>
+          <iframe
+            class="manual"
+            width="70%"
+            height="600"
+            src="../pdfs/google_analytics_170222.pdf"
+            title="PDF"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </center>
 
-        <p>Fuentes:</p>
+        <p>Enlaces de interés:</p>
         <ul>
           <li class="resource">
-            <a href="https://web.dev/media-accessibility/" target="_blank"
-              >Media accessibility
+            <a
+              href="https://midu.dev/adios-google-analytics-alternativas-para-tener-estadisticas-en-tu-web/"
+              target="_blank"
+              >Adiós Google Analytics. Alternativas para tener estadísticas en
+              tu web
+            </a>
+          </li>
+          <li class="resource">
+            <a
+              href="https://www.w3.org/WAI/tips/developing/#associate-a-label-with-every-form-control"
+              target="_blank"
+              >Developing for Web Accessibility
             </a>
           </li>
         </ul>
