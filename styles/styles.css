@@ -84,6 +84,7 @@ nav {
   padding: 1em 1em;
   color: var(--menu-font-color);
   display: block;
+  visibility: visible;
 }
 .content-container {
   display: flex;
@@ -209,9 +210,10 @@ figure {
 
 /* Media queries */
 
-@media (max-width: 780px) {
+/*@media (max-width: 780px) {
   .menu-container {
-    display: none !important;
+    display: none;
     width: 300px;
   }
-}
+}*/
+
